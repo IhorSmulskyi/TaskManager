@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework2</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<div class="container">
+<body>
+<div class="container">
+	 <% if session[:user_id] %>
+	 
+<nav class="navbar navbar-inverse navbar-top">
+	 <a class="navbar-brand" href="#">Task manager</a>
+      <div class="container">
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+           
+	    <li class="active"><a href="tasks">Tasks</a></li>
+	    
+            <li><a href="users">Users</a></li>
+	    <li><a href="#"> </a></li>
+	     <li><a href="#"> </a></li>
+	      <li><a href="#"> </a></li>
+	       <li><a href="#"> </a></li>
+	      <li><a href="#"> </a></li>
+	        <li><a href="#"> </a></li>
+	      <li><a href="#"> </a></li>
+          <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li><li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  <li><a href="#"> </a></li>
+	  
+	      <li>     
+	       <%= button_to 'Logout', logout_path, method: :delete, class: 'btn btn-sm btn-info' %>
+	      </li>
+	    
+        </div>
+	
+	      
+	
+</div>
+ </nav>
+  <% end %>
+ </div>
+ 
+ 
+<%= yield %>
+
+
+</body>
+
+</div>
+
+</html>
